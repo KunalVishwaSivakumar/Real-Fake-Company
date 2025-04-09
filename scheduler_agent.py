@@ -20,8 +20,8 @@ with open(dispatcher_path, "r") as f:
 
 # --- Filter scheduler-relevant issues ---
 scheduler_issues = [
-    route["details"] for route in dispatcher_data.get("routing", [])
-    if route.get("agent") == "SchedulerAgent"
+    route["Details"] for route in dispatcher_data.get("Routing List", [])
+    if route.get("Assigned Agent") == "SchedulerAgent"
 ]
 
 # --- Logic to generate schedule recommendations ---
