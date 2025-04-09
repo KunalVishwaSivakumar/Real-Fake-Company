@@ -74,7 +74,11 @@ crew = Crew(
     verbose=True
 )
 
+
+
 results = crew.kickoff()
+with open("scanner_results.txt", "w") as out_file:
+    out_file.write(str(results))
 print("\n--- Scanner Output ---\n")
 print(results)
 
