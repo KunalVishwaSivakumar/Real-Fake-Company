@@ -1,0 +1,17 @@
+{
+  "summary": "Project Mitigation Plan",
+  "actions": [
+    {
+      "agent": "SchedulerAgent",
+      "action": "Delay Identified: 2025-04-15 - Delivery Update: HVAC shipment delayed by 3 weeks. Suggested Action: Coordinate with vendor and reschedule the impacted task. Consider pushing it to a buffer date like May 30."
+    },
+    {
+      "agent": "SafetyAgent",
+      "action": "PPE violation observed on Level 2 \u2014 Conduct a mandatory PPE refresher session. Assign a dedicated floor-level safety supervisor to ensure compliance."
+    },
+    {
+      "agent": "QAQCAgent",
+      "action": "2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface \u2014 Remove and reapply the affected material or component. Ensure proper bonding and compliance with spec before requesting reinspection."
+    }
+  ]
+}
