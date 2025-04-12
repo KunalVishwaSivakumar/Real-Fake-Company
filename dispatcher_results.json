@@ -1,19 +1,19 @@
 {
-  "Routing List": [
+  "routing": [
     {
-      "Issue Type": "type_delay",
-      "Details": "2025-04-15 - Delivery Update: HVAC shipment delayed by 3 weeks.",
-      "Assigned Agent": "SchedulerAgent"
+      "issue_type": "type_delay",
+      "agent": "SchedulerAgent",
+      "details": "2025-04-15 - Delivery Update: HVAC shipment delayed by 3 weeks."
     },
     {
-      "Issue Type": "type_safety",
-      "Details": "2025-04-18 - PPE violation observed on Level 2",
-      "Assigned Agent": "SafetyAgent"
+      "issue_type": "type_safety",
+      "agent": "SafetyAgent",
+      "details": "2025-04-18 - PPE violation observed on Level 2"
     },
     {
-      "Issue Type": "type_inspection",
-      "Details": "2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface",
-      "Assigned Agent": "QAQCAgent"
+      "issue_type": "type_inspection",
+      "agent": "QAQCAgent",
+      "details": "2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface"
     }
   ]
 }
