@@ -54,8 +54,7 @@ scanner_task = Task(
 crew = Crew(agents=[scanner_agent], tasks=[scanner_task], verbose=True)
 scanner_output = crew.kickoff()
 
-# Save output of Scanner agent
-scanner_output_str = str(scanner_output)  # Convert the CrewOutput object to a string
+scanner_output_str = str(scanner_output)
 with open("scanner_results.json", "w") as f:
     json.dump({"scanner_output": scanner_output_str}, f, indent=2)
 
@@ -85,7 +84,7 @@ class DispatcherTool(BaseTool):
     description: str = Field(default="Routes tagged issues to respective agents based on pre-assigned labels from scanner.")
 
     def _run(self, **kwargs):
-        return json.dumps({"routing": DispatcherLogic(str(scanner_output)).route()}, indent=2)
+        return json.dumps({"routing": DispatcherLogic(scanner_output_str).route()}, indent=2)
 
 dispatcher_agent = Agent(
     role="Dispatcher",
@@ -105,48 +104,47 @@ dispatcher_task = Task(
 crew = Crew(agents=[dispatcher_agent], tasks=[dispatcher_task], verbose=True)
 dispatcher_output = crew.kickoff()
 
-# Save output of Dispatcher agent
 with open("dispatcher_results.json", "w") as f:
     f.write(str(dispatcher_output))
 
-# Print Dispatcher Output
-print("\n--- Dispatcher Output ---\n")
 parsed_dispatch = json.loads(str(dispatcher_output))
 for entry in parsed_dispatch.get("routing", []):
     print(f"- [{entry['issue_type']}] routed to {entry['agent']}: {entry['details']}")
 
 # -----------------------------------------
-# RUN NEXT AGENTS BASED ON DISPATCHER OUTPUT
+# EXECUTE AGENTS FROM DISPATCHER ROUTING
 # -----------------------------------------
-dispatch_data = json.loads(str(dispatcher_output))
-routes = dispatch_data.get("routing", [])
-
 final_outputs = {}
 
-for route in routes:
-    issue_type = route["issue_type"]
-    agent = route["agent"]
-    detail = route["details"]
 
-    class GenericIssueTool(BaseTool):
+def make_tool(issue_type, detail):
+    class CustomTool(BaseTool):
         name: str = Field(default=f"Handle{issue_type}")
         description: str = Field(default=f"Handles {issue_type} issues")
 
         def _run(self, **kwargs):
             if issue_type == "type_delay":
-                return f"The HVAC shipment has been delayed by 3 weeks. To mitigate this delay, we need to implement a comprehensive plan that includes the following steps:\n1. **Communicate with the Vendor**: Contact the supplier to confirm the new delivery schedule and inquire about any possible solutions to expedite the shipment.\n2. **Adjust Project Timeline**: Revise the project schedule to accommodate the delay, ensuring that all team members are informed of the changes.\n3. **Identify Alternatives**: Explore alternative suppliers or products that could meet project specifications in a timely manner.\n4. **Prioritize Critical Tasks**: Focus on other critical path tasks that can progress during the delay to prevent a bottleneck in the project timeline.\n5. **Regular Updates**: Schedule regular updates with the team and stakeholders to keep everyone informed about the status of the shipment and any further adjustments to the timeline.\n6. **Document Changes**: Keep thorough documentation of the delay and the responses taken for accountability and future reference.\n\nBy following this plan, we aim to minimize the impact of the HVAC shipment delay on the overall project timeline."
+                return f"Mitigation plan for delay: HVAC shipment delayed. Steps include contacting vendor, adjusting schedule, exploring alternatives, etc."
             elif issue_type == "type_safety":
-                return f"Mitigation plan for: {detail}\n1. Conduct a safety briefing to emphasize the importance of PPE compliance.\n2. Assign a safety officer to oversee PPE usage on Level 2.\n3. Implement regular PPE inspections and audits.\n4. Provide additional training sessions for all personnel on PPE requirements.\n5. Establish a reporting system for PPE violations.\n6. Encourage a culture of safety where employees can report concerns without fear of reprimand.\n7. Review and update PPE policies as necessary."
+                return f"Mitigation plan for safety issue: {detail}\nConduct safety briefings, assign officers, implement PPE audits, etc."
             elif issue_type == "type_inspection":
-                return f"Mitigation plan for: {detail}\n1. Rework affected area.\n2. Ensure proper bonding.\n3. Schedule reinspection."
-            else:
-                return f"Unhandled issue type: {issue_type}"
+                return f"Mitigation plan for inspection issue: {detail}\nRework area, ensure bonding, schedule reinspection."
+            return f"Unhandled issue type: {issue_type}"
+
+    return CustomTool()
+
+for route in parsed_dispatch.get("routing", []):
+    issue_type = route["issue_type"]
+    agent_name = route["agent"]
+    detail = route["details"]
+
+    tool_instance = make_tool(issue_type, detail)
 
     issue_agent = Agent(
-        role=agent,
+        role=agent_name,
         goal=f"Resolve {issue_type} issues effectively.",
         backstory=f"You handle all {issue_type} situations in the project.",
-        tools=[GenericIssueTool()],
+        tools=[tool_instance],
         verbose=True
     )
 
@@ -160,17 +158,15 @@ for route in routes:
     crew = Crew(agents=[issue_agent], tasks=[issue_task], verbose=True)
     output = crew.kickoff()
 
-    # Save each agent's output separately in JSON
-    agent_output_filename = f"{agent.lower()}_output.json"
+    agent_output_filename = f"{agent_name.lower()}_output.json"
     with open(agent_output_filename, "w", encoding="utf-8") as f:
         json.dump({"output": str(output).strip()}, f, indent=2)
 
-    final_outputs.setdefault(agent, []).append(str(output).strip())
+    final_outputs.setdefault(agent_name, []).append(str(output).strip())
 
 # -----------------------------------------
 # PLANNER AGENT
 # -----------------------------------------
-
 class PlannerTool(BaseTool):
     name: str = Field(default="AggregateMitigationPlans")
     description: str = Field(default="Aggregates mitigation plans from all agents into a unified plan.")
@@ -200,25 +196,21 @@ planner_task = Task(
 crew = Crew(agents=[planner_agent], tasks=[planner_task], verbose=True)
 planner_output = crew.kickoff()
 
-# Saving Planner Output
 with open("planner_output.json", "w", encoding="utf-8") as f:
     f.write(str(planner_output))
 
 # -----------------------------------------
 # EVALUATION AGENT
 # -----------------------------------------
-
 class EvaluationTool(BaseTool):
     name: str = Field(default="EvaluateMitigationPlan")
     description: str = Field(default="Evaluates the quality and SOP compliance of the mitigation plans.")
 
     def _run(self, **kwargs):
-        score = 10  # Example score calculation
-        remarks = "All agent actions are SOP-aligned and clearly stated."  # Example feedback
         return json.dumps({
-            "score": score,
+            "score": 10,
             "sop_compliance": "Yes",
-            "remarks": remarks
+            "remarks": "All agent actions are SOP-aligned and clearly stated."
         }, indent=2)
 
 evaluation_agent = Agent(
@@ -239,6 +231,5 @@ evaluation_task = Task(
 crew = Crew(agents=[evaluation_agent], tasks=[evaluation_task], verbose=True)
 evaluation_output = crew.kickoff()
 
-# Saving Evaluation Output
 with open("evaluation_output.json", "w", encoding="utf-8") as f:
     f.write(str(evaluation_output))

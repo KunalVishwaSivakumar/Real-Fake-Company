@@ -1,0 +1,38 @@
+{
+  "Scanner": "[type_delay] 2025-04-15 - Delivery Update: HVAC shipment delayed by 3 weeks.\n[type_safety] 2025-04-18 - PPE violation observed on Level 2\n[type_inspection] 2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface",
+  "Dispatcher": {
+    "routing": [
+      {
+        "issue_type": "type_delay",
+        "agent": "SchedulerAgent",
+        "details": "2025-04-15 - Delivery Update: HVAC shipment delayed by 3 weeks."
+      },
+      {
+        "issue_type": "type_safety",
+        "agent": "SafetyAgent",
+        "details": "2025-04-18 - PPE violation observed on Level 2"
+      },
+      {
+        "issue_type": "type_inspection",
+        "agent": "QAQCAgent",
+        "details": "2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface"
+      }
+    ]
+  },
+  "SchedulerAgent": "Delay mitigation: contact vendor, adjust schedule, etc.",
+  "SafetyAgent": "Safety mitigation: 2025-04-18 - PPE violation observed on Level 2 - Safety briefings, audits.",
+  "QAQCAgent": "Inspection mitigation: 2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface - Rework, bonding, reinspect.",
+  "Planner": {
+    "summary": "Unified Plan",
+    "actions": [
+      "Delay mitigation: contact vendor, adjust schedule, etc.",
+      "Safety mitigation: 2025-04-18 - PPE violation observed on Level 2 - Safety briefings, audits.",
+      "Inspection mitigation: 2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface - Rework, bonding, reinspect."
+    ]
+  },
+  "Evaluator": {
+    "score": 10,
+    "sop_compliance": "Yes",
+    "remarks": "All actions SOP-aligned."
+  }
+}
