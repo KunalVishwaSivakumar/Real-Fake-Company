@@ -1,33 +1,33 @@
 {
-  "Scanner": "[type_delay] 2025-04-15 - Delivery Update: HVAC shipment delayed by 3 weeks.\n[type_safety] 2025-04-18 - PPE violation observed on Level 2\n[type_inspection] 2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface",
+  "Scanner": "[type_delay] 2025-05-18 - Schedule Concern: Material delivery delayed due to customs clearance.\n[type_safety] 2025-05-22 - Violation: workers not wearing harnesses on Level 3.\n[type_inspection] 2025-05-24 - Basement Foundation: Rebar spacing does not meet code requirement.",
   "Dispatcher": {
     "routing": [
       {
         "issue_type": "type_delay",
         "agent": "SchedulerAgent",
-        "details": "2025-04-15 - Delivery Update: HVAC shipment delayed by 3 weeks."
+        "details": "2025-05-18 - Schedule Concern: Material delivery delayed due to customs clearance."
       },
       {
         "issue_type": "type_safety",
         "agent": "SafetyAgent",
-        "details": "2025-04-18 - PPE violation observed on Level 2"
+        "details": "2025-05-22 - Violation: workers not wearing harnesses on Level 3."
       },
       {
         "issue_type": "type_inspection",
         "agent": "QAQCAgent",
-        "details": "2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface"
+        "details": "2025-05-24 - Basement Foundation: Rebar spacing does not meet code requirement."
       }
     ]
   },
   "SchedulerAgent": "Delay mitigation: contact vendor, adjust schedule, etc.",
-  "SafetyAgent": "Safety mitigation: 2025-04-18 - PPE violation observed on Level 2 - Safety briefings, audits.",
-  "QAQCAgent": "Inspection mitigation: 2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface - Rework, bonding, reinspect.",
+  "SafetyAgent": "Safety mitigation: 2025-05-22 - Violation: workers not wearing harnesses on Level 3. - Safety briefings, audits.",
+  "QAQCAgent": "Inspection mitigation: 2025-05-24 - Basement Foundation: Rebar spacing does not meet code requirement. - Rework, bonding, reinspect.",
   "Planner": {
     "summary": "Unified Plan",
     "actions": [
       "Delay mitigation: contact vendor, adjust schedule, etc.",
-      "Safety mitigation: 2025-04-18 - PPE violation observed on Level 2 - Safety briefings, audits.",
-      "Inspection mitigation: 2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface - Rework, bonding, reinspect."
+      "Safety mitigation: 2025-05-22 - Violation: workers not wearing harnesses on Level 3. - Safety briefings, audits.",
+      "Inspection mitigation: 2025-05-24 - Basement Foundation: Rebar spacing does not meet code requirement. - Rework, bonding, reinspect."
     ]
   },
   "Evaluator": {

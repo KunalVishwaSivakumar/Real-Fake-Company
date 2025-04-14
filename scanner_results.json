@@ -1,3 +1,0 @@
-{
-  "scanner_output": "[type_delay] 2025-04-15 - Delivery Update: HVAC shipment delayed by 3 weeks. | agent: SchedulerAgent\n[type_safety] 2025-04-18 - PPE violation observed on Level 2 | agent: SafetyAgent\n[type_inspection] 2025-04-25 - Elevator Pit: Waterproofing membrane not bonded to surface | agent: QAQCAgent"
-}
