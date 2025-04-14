@@ -1,0 +1,841 @@
+{
+  "project_name": "Project Atlas",
+  "month": 5,
+  "status_date": "2025-05-01",
+  "activities": [
+    {
+      "task_id": "T001",
+      "description": "Activity 1",
+      "start_date": "2025-05-16",
+      "end_date": "2025-05-23",
+      "assigned_to": "Subcontractor 4",
+      "critical": true
+    },
+    {
+      "task_id": "T002",
+      "description": "Activity 2",
+      "start_date": "2025-05-26",
+      "end_date": "2025-05-30",
+      "assigned_to": "Subcontractor 10",
+      "critical": true
+    },
+    {
+      "task_id": "T003",
+      "description": "Activity 3",
+      "start_date": "2025-04-27",
+      "end_date": "2025-05-03",
+      "assigned_to": "Subcontractor 17",
+      "critical": true
+    },
+    {
+      "task_id": "T004",
+      "description": "Activity 4",
+      "start_date": "2025-04-30",
+      "end_date": "2025-05-04",
+      "assigned_to": "Subcontractor 8",
+      "critical": false
+    },
+    {
+      "task_id": "T005",
+      "description": "Activity 5",
+      "start_date": "2025-04-28",
+      "end_date": "2025-05-08",
+      "assigned_to": "Subcontractor 7",
+      "critical": true
+    },
+    {
+      "task_id": "T006",
+      "description": "Activity 6",
+      "start_date": "2025-04-12",
+      "end_date": "2025-04-20",
+      "assigned_to": "Subcontractor 20",
+      "critical": true
+    },
+    {
+      "task_id": "T007",
+      "description": "Activity 7",
+      "start_date": "2025-04-27",
+      "end_date": "2025-05-06",
+      "assigned_to": "Subcontractor 10",
+      "critical": true
+    },
+    {
+      "task_id": "T008",
+      "description": "Activity 8",
+      "start_date": "2025-04-29",
+      "end_date": "2025-05-04",
+      "assigned_to": "Subcontractor 1",
+      "critical": false
+    },
+    {
+      "task_id": "T009",
+      "description": "Activity 9",
+      "start_date": "2025-03-16",
+      "end_date": "2025-03-19",
+      "assigned_to": "Subcontractor 25",
+      "critical": true
+    },
+    {
+      "task_id": "T010",
+      "description": "Activity 10",
+      "start_date": "2025-04-04",
+      "end_date": "2025-04-11",
+      "assigned_to": "Subcontractor 23",
+      "critical": false
+    },
+    {
+      "task_id": "T011",
+      "description": "Activity 11",
+      "start_date": "2025-05-14",
+      "end_date": "2025-05-19",
+      "assigned_to": "Subcontractor 16",
+      "critical": false
+    },
+    {
+      "task_id": "T012",
+      "description": "Activity 12",
+      "start_date": "2025-04-03",
+      "end_date": "2025-04-13",
+      "assigned_to": "Subcontractor 21",
+      "critical": false
+    },
+    {
+      "task_id": "T013",
+      "description": "Activity 13",
+      "start_date": "2025-04-12",
+      "end_date": "2025-04-22",
+      "assigned_to": "Subcontractor 12",
+      "critical": false
+    },
+    {
+      "task_id": "T014",
+      "description": "Activity 14",
+      "start_date": "2025-04-12",
+      "end_date": "2025-04-18",
+      "assigned_to": "Subcontractor 20",
+      "critical": true
+    },
+    {
+      "task_id": "T015",
+      "description": "Activity 15",
+      "start_date": "2025-04-24",
+      "end_date": "2025-04-29",
+      "assigned_to": "Subcontractor 13",
+      "critical": true
+    },
+    {
+      "task_id": "T016",
+      "description": "Activity 16",
+      "start_date": "2025-05-21",
+      "end_date": "2025-05-26",
+      "assigned_to": "Subcontractor 8",
+      "critical": false
+    },
+    {
+      "task_id": "T017",
+      "description": "Activity 17",
+      "start_date": "2025-04-05",
+      "end_date": "2025-04-15",
+      "assigned_to": "Subcontractor 15",
+      "critical": true
+    },
+    {
+      "task_id": "T018",
+      "description": "Activity 18",
+      "start_date": "2025-04-05",
+      "end_date": "2025-04-11",
+      "assigned_to": "Subcontractor 22",
+      "critical": true
+    },
+    {
+      "task_id": "T019",
+      "description": "Activity 19",
+      "start_date": "2025-05-09",
+      "end_date": "2025-05-15",
+      "assigned_to": "Subcontractor 3",
+      "critical": false
+    },
+    {
+      "task_id": "T020",
+      "description": "Activity 20",
+      "start_date": "2025-05-13",
+      "end_date": "2025-05-21",
+      "assigned_to": "Subcontractor 1",
+      "critical": false
+    },
+    {
+      "task_id": "T021",
+      "description": "Activity 21",
+      "start_date": "2025-05-27",
+      "end_date": "2025-06-01",
+      "assigned_to": "Subcontractor 9",
+      "critical": false
+    },
+    {
+      "task_id": "T022",
+      "description": "Activity 22",
+      "start_date": "2025-04-27",
+      "end_date": "2025-05-01",
+      "assigned_to": "Subcontractor 9",
+      "critical": true
+    },
+    {
+      "task_id": "T023",
+      "description": "Activity 23",
+      "start_date": "2025-03-08",
+      "end_date": "2025-03-15",
+      "assigned_to": "Subcontractor 12",
+      "critical": false
+    },
+    {
+      "task_id": "T024",
+      "description": "Activity 24",
+      "start_date": "2025-05-25",
+      "end_date": "2025-06-02",
+      "assigned_to": "Subcontractor 16",
+      "critical": false
+    },
+    {
+      "task_id": "T025",
+      "description": "Activity 25",
+      "start_date": "2025-03-19",
+      "end_date": "2025-03-25",
+      "assigned_to": "Subcontractor 14",
+      "critical": false
+    },
+    {
+      "task_id": "T026",
+      "description": "Activity 26",
+      "start_date": "2025-04-19",
+      "end_date": "2025-04-23",
+      "assigned_to": "Subcontractor 19",
+      "critical": true
+    },
+    {
+      "task_id": "T027",
+      "description": "Activity 27",
+      "start_date": "2025-05-23",
+      "end_date": "2025-05-30",
+      "assigned_to": "Subcontractor 18",
+      "critical": false
+    },
+    {
+      "task_id": "T028",
+      "description": "Activity 28",
+      "start_date": "2025-03-14",
+      "end_date": "2025-03-19",
+      "assigned_to": "Subcontractor 18",
+      "critical": true
+    },
+    {
+      "task_id": "T029",
+      "description": "Activity 29",
+      "start_date": "2025-05-24",
+      "end_date": "2025-06-02",
+      "assigned_to": "Subcontractor 5",
+      "critical": true
+    },
+    {
+      "task_id": "T030",
+      "description": "Activity 30",
+      "start_date": "2025-03-19",
+      "end_date": "2025-03-25",
+      "assigned_to": "Subcontractor 6",
+      "critical": false
+    },
+    {
+      "task_id": "T031",
+      "description": "Activity 31",
+      "start_date": "2025-04-04",
+      "end_date": "2025-04-09",
+      "assigned_to": "Subcontractor 17",
+      "critical": true
+    },
+    {
+      "task_id": "T032",
+      "description": "Activity 32",
+      "start_date": "2025-04-01",
+      "end_date": "2025-04-10",
+      "assigned_to": "Subcontractor 24",
+      "critical": false
+    },
+    {
+      "task_id": "T033",
+      "description": "Activity 33",
+      "start_date": "2025-03-08",
+      "end_date": "2025-03-11",
+      "assigned_to": "Subcontractor 24",
+      "critical": false
+    },
+    {
+      "task_id": "T034",
+      "description": "Activity 34",
+      "start_date": "2025-05-15",
+      "end_date": "2025-05-23",
+      "assigned_to": "Subcontractor 15",
+      "critical": true
+    },
+    {
+      "task_id": "T035",
+      "description": "Activity 35",
+      "start_date": "2025-03-18",
+      "end_date": "2025-03-28",
+      "assigned_to": "Subcontractor 7",
+      "critical": false
+    },
+    {
+      "task_id": "T036",
+      "description": "Activity 36",
+      "start_date": "2025-05-01",
+      "end_date": "2025-05-11",
+      "assigned_to": "Subcontractor 23",
+      "critical": false
+    },
+    {
+      "task_id": "T037",
+      "description": "Activity 37",
+      "start_date": "2025-05-12",
+      "end_date": "2025-05-20",
+      "assigned_to": "Subcontractor 17",
+      "critical": false
+    },
+    {
+      "task_id": "T038",
+      "description": "Activity 38",
+      "start_date": "2025-04-01",
+      "end_date": "2025-04-10",
+      "assigned_to": "Subcontractor 13",
+      "critical": false
+    },
+    {
+      "task_id": "T039",
+      "description": "Activity 39",
+      "start_date": "2025-05-02",
+      "end_date": "2025-05-07",
+      "assigned_to": "Subcontractor 6",
+      "critical": false
+    },
+    {
+      "task_id": "T040",
+      "description": "Activity 40",
+      "start_date": "2025-03-10",
+      "end_date": "2025-03-20",
+      "assigned_to": "Subcontractor 10",
+      "critical": true
+    },
+    {
+      "task_id": "T041",
+      "description": "Activity 41",
+      "start_date": "2025-04-15",
+      "end_date": "2025-04-21",
+      "assigned_to": "Subcontractor 2",
+      "critical": false
+    },
+    {
+      "task_id": "T042",
+      "description": "Activity 42",
+      "start_date": "2025-03-20",
+      "end_date": "2025-03-27",
+      "assigned_to": "Subcontractor 14",
+      "critical": true
+    },
+    {
+      "task_id": "T043",
+      "description": "Activity 43",
+      "start_date": "2025-05-11",
+      "end_date": "2025-05-15",
+      "assigned_to": "Subcontractor 21",
+      "critical": false
+    },
+    {
+      "task_id": "T044",
+      "description": "Activity 44",
+      "start_date": "2025-05-04",
+      "end_date": "2025-05-08",
+      "assigned_to": "Subcontractor 16",
+      "critical": true
+    },
+    {
+      "task_id": "T045",
+      "description": "Activity 45",
+      "start_date": "2025-05-25",
+      "end_date": "2025-05-31",
+      "assigned_to": "Subcontractor 1",
+      "critical": true
+    },
+    {
+      "task_id": "T046",
+      "description": "Activity 46",
+      "start_date": "2025-05-20",
+      "end_date": "2025-05-27",
+      "assigned_to": "Subcontractor 25",
+      "critical": false
+    },
+    {
+      "task_id": "T047",
+      "description": "Activity 47",
+      "start_date": "2025-03-24",
+      "end_date": "2025-04-02",
+      "assigned_to": "Subcontractor 25",
+      "critical": true
+    },
+    {
+      "task_id": "T048",
+      "description": "Activity 48",
+      "start_date": "2025-03-10",
+      "end_date": "2025-03-16",
+      "assigned_to": "Subcontractor 3",
+      "critical": false
+    },
+    {
+      "task_id": "T049",
+      "description": "Activity 49",
+      "start_date": "2025-03-10",
+      "end_date": "2025-03-15",
+      "assigned_to": "Subcontractor 9",
+      "critical": false
+    },
+    {
+      "task_id": "T050",
+      "description": "Activity 50",
+      "start_date": "2025-04-07",
+      "end_date": "2025-04-14",
+      "assigned_to": "Subcontractor 2",
+      "critical": false
+    },
+    {
+      "task_id": "T051",
+      "description": "Activity 51",
+      "start_date": "2025-05-05",
+      "end_date": "2025-05-09",
+      "assigned_to": "Subcontractor 4",
+      "critical": false
+    },
+    {
+      "task_id": "T052",
+      "description": "Activity 52",
+      "start_date": "2025-04-15",
+      "end_date": "2025-04-20",
+      "assigned_to": "Subcontractor 10",
+      "critical": false
+    },
+    {
+      "task_id": "T053",
+      "description": "Activity 53",
+      "start_date": "2025-05-28",
+      "end_date": "2025-06-05",
+      "assigned_to": "Subcontractor 21",
+      "critical": false
+    },
+    {
+      "task_id": "T054",
+      "description": "Activity 54",
+      "start_date": "2025-04-01",
+      "end_date": "2025-04-11",
+      "assigned_to": "Subcontractor 7",
+      "critical": true
+    },
+    {
+      "task_id": "T055",
+      "description": "Activity 55",
+      "start_date": "2025-03-28",
+      "end_date": "2025-04-06",
+      "assigned_to": "Subcontractor 6",
+      "critical": false
+    },
+    {
+      "task_id": "T056",
+      "description": "Activity 56",
+      "start_date": "2025-03-28",
+      "end_date": "2025-04-02",
+      "assigned_to": "Subcontractor 11",
+      "critical": false
+    },
+    {
+      "task_id": "T057",
+      "description": "Activity 57",
+      "start_date": "2025-04-27",
+      "end_date": "2025-05-02",
+      "assigned_to": "Subcontractor 11",
+      "critical": true
+    },
+    {
+      "task_id": "T058",
+      "description": "Activity 58",
+      "start_date": "2025-04-19",
+      "end_date": "2025-04-23",
+      "assigned_to": "Subcontractor 7",
+      "critical": false
+    },
+    {
+      "task_id": "T059",
+      "description": "Activity 59",
+      "start_date": "2025-03-25",
+      "end_date": "2025-03-30",
+      "assigned_to": "Subcontractor 23",
+      "critical": true
+    },
+    {
+      "task_id": "T060",
+      "description": "Activity 60",
+      "start_date": "2025-04-21",
+      "end_date": "2025-04-29",
+      "assigned_to": "Subcontractor 5",
+      "critical": false
+    },
+    {
+      "task_id": "T061",
+      "description": "Activity 61",
+      "start_date": "2025-03-14",
+      "end_date": "2025-03-17",
+      "assigned_to": "Subcontractor 7",
+      "critical": true
+    },
+    {
+      "task_id": "T062",
+      "description": "Activity 62",
+      "start_date": "2025-04-14",
+      "end_date": "2025-04-20",
+      "assigned_to": "Subcontractor 11",
+      "critical": false
+    },
+    {
+      "task_id": "T063",
+      "description": "Activity 63",
+      "start_date": "2025-03-04",
+      "end_date": "2025-03-11",
+      "assigned_to": "Subcontractor 8",
+      "critical": true
+    },
+    {
+      "task_id": "T064",
+      "description": "Activity 64",
+      "start_date": "2025-03-18",
+      "end_date": "2025-03-26",
+      "assigned_to": "Subcontractor 1",
+      "critical": true
+    },
+    {
+      "task_id": "T065",
+      "description": "Activity 65",
+      "start_date": "2025-05-18",
+      "end_date": "2025-05-25",
+      "assigned_to": "Subcontractor 3",
+      "critical": true
+    },
+    {
+      "task_id": "T066",
+      "description": "Activity 66",
+      "start_date": "2025-04-07",
+      "end_date": "2025-04-15",
+      "assigned_to": "Subcontractor 17",
+      "critical": false
+    },
+    {
+      "task_id": "T067",
+      "description": "Activity 67",
+      "start_date": "2025-04-06",
+      "end_date": "2025-04-11",
+      "assigned_to": "Subcontractor 16",
+      "critical": false
+    },
+    {
+      "task_id": "T068",
+      "description": "Activity 68",
+      "start_date": "2025-04-04",
+      "end_date": "2025-04-10",
+      "assigned_to": "Subcontractor 2",
+      "critical": false
+    },
+    {
+      "task_id": "T069",
+      "description": "Activity 69",
+      "start_date": "2025-03-02",
+      "end_date": "2025-03-08",
+      "assigned_to": "Subcontractor 9",
+      "critical": true
+    },
+    {
+      "task_id": "T070",
+      "description": "Activity 70",
+      "start_date": "2025-03-23",
+      "end_date": "2025-03-29",
+      "assigned_to": "Subcontractor 19",
+      "critical": false
+    },
+    {
+      "task_id": "T071",
+      "description": "Activity 71",
+      "start_date": "2025-04-29",
+      "end_date": "2025-05-03",
+      "assigned_to": "Subcontractor 4",
+      "critical": false
+    },
+    {
+      "task_id": "T072",
+      "description": "Activity 72",
+      "start_date": "2025-04-09",
+      "end_date": "2025-04-19",
+      "assigned_to": "Subcontractor 6",
+      "critical": false
+    },
+    {
+      "task_id": "T073",
+      "description": "Activity 73",
+      "start_date": "2025-03-08",
+      "end_date": "2025-03-18",
+      "assigned_to": "Subcontractor 25",
+      "critical": false
+    },
+    {
+      "task_id": "T074",
+      "description": "Activity 74",
+      "start_date": "2025-03-15",
+      "end_date": "2025-03-23",
+      "assigned_to": "Subcontractor 20",
+      "critical": false
+    },
+    {
+      "task_id": "T075",
+      "description": "Activity 75",
+      "start_date": "2025-05-29",
+      "end_date": "2025-06-01",
+      "assigned_to": "Subcontractor 2",
+      "critical": true
+    },
+    {
+      "task_id": "T076",
+      "description": "Activity 76",
+      "start_date": "2025-03-29",
+      "end_date": "2025-04-06",
+      "assigned_to": "Subcontractor 16",
+      "critical": false
+    },
+    {
+      "task_id": "T077",
+      "description": "Activity 77",
+      "start_date": "2025-05-05",
+      "end_date": "2025-05-14",
+      "assigned_to": "Subcontractor 14",
+      "critical": false
+    },
+    {
+      "task_id": "T078",
+      "description": "Activity 78",
+      "start_date": "2025-05-28",
+      "end_date": "2025-06-04",
+      "assigned_to": "Subcontractor 25",
+      "critical": false
+    },
+    {
+      "task_id": "T079",
+      "description": "Activity 79",
+      "start_date": "2025-05-03",
+      "end_date": "2025-05-07",
+      "assigned_to": "Subcontractor 8",
+      "critical": false
+    },
+    {
+      "task_id": "T080",
+      "description": "Activity 80",
+      "start_date": "2025-03-20",
+      "end_date": "2025-03-29",
+      "assigned_to": "Subcontractor 7",
+      "critical": true
+    },
+    {
+      "task_id": "T081",
+      "description": "Activity 81",
+      "start_date": "2025-03-24",
+      "end_date": "2025-04-02",
+      "assigned_to": "Subcontractor 12",
+      "critical": false
+    },
+    {
+      "task_id": "T082",
+      "description": "Activity 82",
+      "start_date": "2025-05-21",
+      "end_date": "2025-05-28",
+      "assigned_to": "Subcontractor 9",
+      "critical": false
+    },
+    {
+      "task_id": "T083",
+      "description": "Activity 83",
+      "start_date": "2025-05-29",
+      "end_date": "2025-06-03",
+      "assigned_to": "Subcontractor 3",
+      "critical": false
+    },
+    {
+      "task_id": "T084",
+      "description": "Activity 84",
+      "start_date": "2025-03-13",
+      "end_date": "2025-03-16",
+      "assigned_to": "Subcontractor 19",
+      "critical": false
+    },
+    {
+      "task_id": "T085",
+      "description": "Activity 85",
+      "start_date": "2025-03-20",
+      "end_date": "2025-03-26",
+      "assigned_to": "Subcontractor 12",
+      "critical": false
+    },
+    {
+      "task_id": "T086",
+      "description": "Activity 86",
+      "start_date": "2025-05-18",
+      "end_date": "2025-05-28",
+      "assigned_to": "Subcontractor 24",
+      "critical": true
+    },
+    {
+      "task_id": "T087",
+      "description": "Activity 87",
+      "start_date": "2025-03-05",
+      "end_date": "2025-03-14",
+      "assigned_to": "Subcontractor 8",
+      "critical": false
+    },
+    {
+      "task_id": "T088",
+      "description": "Activity 88",
+      "start_date": "2025-03-31",
+      "end_date": "2025-04-03",
+      "assigned_to": "Subcontractor 20",
+      "critical": false
+    },
+    {
+      "task_id": "T089",
+      "description": "Activity 89",
+      "start_date": "2025-04-08",
+      "end_date": "2025-04-12",
+      "assigned_to": "Subcontractor 6",
+      "critical": true
+    },
+    {
+      "task_id": "T090",
+      "description": "Activity 90",
+      "start_date": "2025-04-29",
+      "end_date": "2025-05-05",
+      "assigned_to": "Subcontractor 22",
+      "critical": true
+    },
+    {
+      "task_id": "T091",
+      "description": "Activity 91",
+      "start_date": "2025-04-06",
+      "end_date": "2025-04-09",
+      "assigned_to": "Subcontractor 12",
+      "critical": true
+    },
+    {
+      "task_id": "T092",
+      "description": "Activity 92",
+      "start_date": "2025-04-15",
+      "end_date": "2025-04-21",
+      "assigned_to": "Subcontractor 17",
+      "critical": false
+    },
+    {
+      "task_id": "T093",
+      "description": "Activity 93",
+      "start_date": "2025-04-18",
+      "end_date": "2025-04-24",
+      "assigned_to": "Subcontractor 25",
+      "critical": false
+    },
+    {
+      "task_id": "T094",
+      "description": "Activity 94",
+      "start_date": "2025-03-11",
+      "end_date": "2025-03-20",
+      "assigned_to": "Subcontractor 19",
+      "critical": false
+    },
+    {
+      "task_id": "T095",
+      "description": "Activity 95",
+      "start_date": "2025-03-31",
+      "end_date": "2025-04-10",
+      "assigned_to": "Subcontractor 3",
+      "critical": false
+    },
+    {
+      "task_id": "T096",
+      "description": "Activity 96",
+      "start_date": "2025-03-03",
+      "end_date": "2025-03-11",
+      "assigned_to": "Subcontractor 25",
+      "critical": true
+    },
+    {
+      "task_id": "T097",
+      "description": "Activity 97",
+      "start_date": "2025-05-19",
+      "end_date": "2025-05-22",
+      "assigned_to": "Subcontractor 13",
+      "critical": true
+    },
+    {
+      "task_id": "T098",
+      "description": "Activity 98",
+      "start_date": "2025-05-16",
+      "end_date": "2025-05-23",
+      "assigned_to": "Subcontractor 11",
+      "critical": true
+    },
+    {
+      "task_id": "T099",
+      "description": "Activity 99",
+      "start_date": "2025-03-28",
+      "end_date": "2025-04-06",
+      "assigned_to": "Subcontractor 11",
+      "critical": true
+    },
+    {
+      "task_id": "T100",
+      "description": "Activity 100",
+      "start_date": "2025-05-15",
+      "end_date": "2025-05-23",
+      "assigned_to": "Subcontractor 16",
+      "critical": false
+    }
+  ],
+  "emails": [
+    {
+      "from": "vendor1@example.com",
+      "to": "projectteam@atlas.com",
+      "subject": "Delivery Update",
+      "body": "HVAC shipment delayed by 3 weeks.",
+      "date": "2025-04-15"
+    }
+  ],
+  "rfis": [
+    {
+      "rfi_id": "RFI-101",
+      "question": "Clarify fire stopping detail at shaft wall.",
+      "submitted_date": "2025-04-07",
+      "response_date": null,
+      "status": "Open"
+    }
+  ],
+  "site_logs": [
+    {
+      "log_date": "2025-04-18",
+      "description": "PPE violation observed on Level 2",
+      "type": "Safety"
+    }
+  ],
+  "inspection_reports": [
+    {
+      "report_id": "INSP-203",
+      "date": "2025-04-25",
+      "area": "Elevator Pit",
+      "status": "Failed",
+      "comments": "Waterproofing membrane not bonded to surface"
+    }
+  ]
+}
