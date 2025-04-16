@@ -144,14 +144,44 @@ if uploaded_file:
 
     class PlannerTool(BaseTool):
         name: str = Field(default="AggregateMitigationPlans")
-        description: str = Field(default="Aggregate mitigation plans.")
+        description: str = Field(default="Aggregate and provide step-by-step mitigation strategy.")
         def _run(self, **kwargs):
-            return json.dumps({"summary": "Unified Plan", "actions": [task.output for task in issue_tasks]}, indent=2)
+            summary = ["### \U0001f9cd\u200d\u2696\ufe0f Planner’s Coordinated Mitigation Strategy\n"]
+            for task in issue_tasks:
+                role = task.agent.role
+                output = task.output.strip().lower()
+                if "delay mitigation" in output:
+                    summary.append(
+                        f"\U0001f552 **Delay Mitigation Plan by {role}**\n"
+                        "1. Contact the vendor to confirm the expected new delivery date.\n"
+                        "2. Revise the master schedule to reflect the updated delivery.\n"
+                        "3. Notify subcontractors and teams impacted by the delay.\n"
+                        "4. Re-sequence dependent tasks if required.\n"
+                    )
+                elif "safety mitigation" in output:
+                    summary.append(
+                        f"\U0001f6ba **Safety Mitigation Plan by {role}**\n"
+                        "1. Identify root cause of the safety violation.\n"
+                        "2. Conduct a site-wide safety audit.\n"
+                        "3. Reinforce safety protocols and distribute safety reminders.\n"
+                        "4. Schedule mandatory toolbox talks or safety training sessions.\n"
+                    )
+                elif "inspection mitigation" in output:
+                    summary.append(
+                        f"\U0001f9ea **Inspection Mitigation Plan by {role}**\n"
+                        "1. Assign crew to rework the failed inspection component.\n"
+                        "2. Apply bonding/sealing per inspection guidelines.\n"
+                        "3. Schedule reinspection with QA/QC.\n"
+                        "4. Log the outcome and update documentation for compliance tracking.\n"
+                    )
+                else:
+                    summary.append(f"⚙️ **General Mitigation by {role}**: {task.output.strip()}")
+            return "\n".join(summary)
 
     planner_agent = Agent(
         role="Planner",
         goal="Aggregate plans",
-        backstory="Combine mitigation actions.",
+        backstory="Combine mitigation actions",
         tools=[PlannerTool()],
         knowledge_sources=[planner_sop],
         verbose=True
