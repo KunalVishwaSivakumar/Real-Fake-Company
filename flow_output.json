@@ -22,14 +22,7 @@
   "SchedulerAgent": "Delay mitigation: contact vendor, adjust schedule, etc.",
   "SafetyAgent": "Safety mitigation: 2025-05-22 - Violation: workers not wearing harnesses on Level 3. - Safety briefings, audits.",
   "QAQCAgent": "Inspection mitigation: 2025-05-24 - Basement Foundation: Rebar spacing does not meet code requirement. - Rework, bonding, reinspect.",
-  "Planner": {
-    "summary": "Unified Plan",
-    "actions": [
-      "Delay mitigation: contact vendor, adjust schedule, etc.",
-      "Safety mitigation: 2025-05-22 - Violation: workers not wearing harnesses on Level 3. - Safety briefings, audits.",
-      "Inspection mitigation: 2025-05-24 - Basement Foundation: Rebar spacing does not meet code requirement. - Rework, bonding, reinspect."
-    ]
-  },
+  "Planner": "### \ud83e\uddd1\u200d\u2696\ufe0f Planner\u2019s Coordinated Mitigation Strategy\n\n\ud83d\udd52 **Delay Mitigation Plan by SchedulerAgent**\n1. Contact the vendor to confirm the expected new delivery date.\n2. Revise the master schedule to reflect the updated delivery.\n3. Notify subcontractors and teams impacted by the delay.\n4. Re-sequence dependent tasks if required.\n\n\ud83d\udee1\ufe0f **Safety Mitigation Plan by SafetyAgent**\n1. Identify root cause of the safety violation.\n2. Conduct a site-wide safety audit.\n3. Reinforce safety protocols and distribute safety reminders.\n4. Schedule mandatory toolbox talks or safety training sessions.\n\n\ud83d\udd2c **Inspection Mitigation Plan by QAQCAgent**\n1. Assign crew to rework the failed inspection component.\n2. Apply bonding/sealing per inspection guidelines.\n3. Schedule reinspection with QA/QC.\n4. Log the outcome and update documentation for compliance tracking.\n",
   "Evaluator": {
     "score": 10,
     "sop_compliance": "Yes",
