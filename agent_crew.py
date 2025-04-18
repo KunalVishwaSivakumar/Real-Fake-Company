@@ -195,8 +195,19 @@ flow = Flow(all_tasks)
 crew = Crew(agents=all_agents, tasks=all_tasks, flow=flow)
 
 with st.spinner("🚀 Running All Agents..."):
-    crew_result = crew.kickoff()
-    st.success("✅ Master Mitigation Plan Generated!")
+    crew.kickoff()
+    st.success("✅ All agents executed successfully!")
+
+    for i, task in enumerate(all_tasks):
+        st.markdown(f"### 🧠 Agent: `{task.agent.role}`")
+        st.markdown("**Output:**")
+        st.code(task.output or "No output generated", language="markdown")
+        st.progress((i + 1) / len(all_tasks))
+        st.markdown("---")
+
+
+    st.success("✅ All agents executed successfully!")
+
 
     st.markdown("## 📊 Agent Execution Logs")
     for task in all_tasks:
